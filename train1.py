@@ -14,7 +14,9 @@ X, y = diabetes.data, diabetes.target
 
 # Split the dataset into training and testing sets
 print("Splitting the data into training and testing sets.")
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
 
 # Initialize and train the linear regression model
 print("Training the Linear Regression model.")
