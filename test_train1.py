@@ -31,3 +31,4 @@ def test_model_predictions():
     # Make predictions
     predictions = model.predict(sample_data)
     assert len(predictions) == len(sample_data), "Prediction length mismatch!"
+    
