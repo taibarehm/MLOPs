@@ -1,0 +1,66 @@
+name: CI/CD Pipeline for Diabetes ML Project
+
+# Run the pipeline on every push and pull request to the main branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  linting:
+    name: Linting Python Code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      - name: Install Dependencies
+        run: |
+          pip install flake8
+
+      - name: Run flake8 Linter
+        run: flake8 scripts/ tests/
+
+  testing:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Tests
+        run: pytest tests/
+
+  deploy:
+    name: Simulate Deployment
+    runs-on: ubuntu-latest
+    needs: [linting, testing] # Run only if linting and testing pass
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      - name: Train and Save Model
+        run: |
+          python scripts/train.py
