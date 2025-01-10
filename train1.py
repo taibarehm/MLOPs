@@ -30,7 +30,7 @@ print(f"Mean Squared Error: {mse:.2f}")
 # Save the trained model to the 'models' directory
 print("Saving the trained model.")
 os.makedirs("models", exist_ok=True)
-model_path = "C:/Users/asus/OneDrive/Desktop/MLOPs/linear_regression_diabetes.pkl"
+model_path = "models/linear_regression_diabetes.pkl"
 joblib.dump(model, model_path)
 print(f"Model saved to {model_path}")
 print("Model trained and saved!")

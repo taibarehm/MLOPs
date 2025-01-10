@@ -4,7 +4,7 @@ import numpy as np
 
 # Path to the saved model
 #  MODEL_PATH = "E:/MLOps_Assignment1/models/diabetes_model.pkl"
-MODEL_PATH = "C:/Users/asus/OneDrive/Desktop/MLOPs/linear_regression_diabetes.pkl"
+MODEL_PATH = "models/linear_regression_diabetes.pkl"
 
 def test_model_file_exists():
     """
