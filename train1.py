@@ -35,4 +35,4 @@ os.makedirs("models", exist_ok=True)
 model_path = "models/linear_regression_diabetes.pkl"
 joblib.dump(model, model_path)
 print(f"Model saved to {model_path}")
-print("Model trained and saved!")
+print("Model trained and saveed!")
