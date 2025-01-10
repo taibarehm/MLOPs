@@ -19,16 +19,6 @@ Understand the basics of MLOps and implement a simple CI/CD pipeline.
   - Merging
   - Pull Requests
 
-### 3. Experiment Tracking
-- **Tool Used:** MLflow
-- **Features:**
-  - Track experiments
-  - Record metrics, parameters, and results
-
-### 4. Data Versioning
-- **Tool Used:** DVC (Data Version Control)
-- **Features:**
-  - Version control for datasets
 
 ## Setup Instructions
 
